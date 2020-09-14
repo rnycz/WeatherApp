@@ -1,0 +1,39 @@
+﻿<Window x:Class="Pogoda.PogodaJutro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pogoda"
+        mc:Ignorable="d"
+        Title="Prognoza pogody na jutro" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="tlo-jasne.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="tempTB" HorizontalAlignment="Left" Height="23" Margin="190,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="miastoLBL" Content="Prognoza pogody na jutro" HorizontalAlignment="Left" Margin="189,10,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Georgia" FontWeight="Bold"/>
+        <Label x:Name="tempLBL" Content="Temperatura:" HorizontalAlignment="Left" Margin="75,81,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <TextBox x:Name="cisnienieTB" HorizontalAlignment="Left" Height="23" Margin="190,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="cisnienieLBL" Content="Ciśnienie:" HorizontalAlignment="Left" Margin="102,174,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <Label x:Name="godzLBL" Content="Data i godzina:" HorizontalAlignment="Left" Margin="190,45,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="wiatrLBL" Content="Wiatr:" HorizontalAlignment="Left" Margin="128,143,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <TextBox x:Name="wiatrTB" HorizontalAlignment="Left" Height="23" Margin="190,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <TextBox x:Name="deszczTB" HorizontalAlignment="Left" Height="23" Margin="190,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="deszczLBL" Content="Deszcz:" HorizontalAlignment="Left" Margin="121,112,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <TextBox x:Name="zachmurzenieTB" HorizontalAlignment="Left" Height="23" Margin="190,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="zachmurzenieLBL" Content="Zachmurzenie:" HorizontalAlignment="Left" Margin="66,205,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <TextBox x:Name="wilgotnoscTB" HorizontalAlignment="Left" Height="23" Margin="190,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="wilgotnoscLBL" Content="Wilgotność:" HorizontalAlignment="Left" Margin="89,236,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <TextBox x:Name="sniegTB" HorizontalAlignment="Left" Height="23" Margin="190,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFF7F1F1" FontSize="14" FontFamily="Verdana"/>
+        <Label x:Name="sniegLBL" Content="Śnieg:" HorizontalAlignment="Left" Margin="130,267,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Georgia" FontWeight="Bold"/>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="352,105,0,0" VerticalAlignment="Top" Width="145" SelectionChanged="ListBox_SelectionChanged" FontSize="14" FontFamily="Verdana" BorderBrush="Black" Background="#FFF7F1F1">
+            <ListBoxItem x:Name="katowiceLBI" Content="Katowice" ToolTip="katowice-299998" />
+            <ListBoxItem x:Name="warszawaLBI" Content="Warszawa" ToolTip="warszawa-357732" />
+            <ListBoxItem x:Name="krakowLBI" Content="Kraków" ToolTip="krakow-306020" />
+            <ListBoxItem x:Name="gdanskLBI" Content="Gdańsk" ToolTip="gdansk-287788" />
+            <ListBoxItem x:Name="torunkLBI" Content="Toruń" ToolTip="torun-355171" />
+        </ListBox>
+        <Label x:Name="wybierzMiastoLBL" Content="Wybierz miasto:" HorizontalAlignment="Left" Margin="352,72,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Georgia"/>
+        <Button x:Name="dzisiajBTN" Content="Aktualna pogoda" HorizontalAlignment="Left" Margin="363,263,0,0" VerticalAlignment="Top" Width="134" Click="dzisiajBTN_Click" Background="#FF84FD6A" BorderBrush="Black" Height="30" FontSize="16" FontFamily="Calibri" FontWeight="Bold"/>
+    </Grid>
+</Window>
